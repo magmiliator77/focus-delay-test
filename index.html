@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body>
+<h1>HTML DOM Events</h1>
+<h2>The onfocus and blur Events</h2>
+
+
+<div class="div">
+
+    Enter your name: <input type="text" id="myInput" onfocus="focusFunction()" onblur="setTimeout(time,1000); blurFunction()">
+
+</div>
+
+
+
+
+<script>
+
+// Al hacer focus sobre el input de texto se pone amarillo
+function focusFunction() {
+  document.getElementById("myInput").style.background = "yellow";
+}
+
+// Cuando dejas de hacer focus sobre este, se espera 3 segundo y el fondo pasa a rojo
+function time() {
+  document.getElementById("myInput").style.background = "red";
+}
+
+
+</script>
+
+</body>
+</html>
